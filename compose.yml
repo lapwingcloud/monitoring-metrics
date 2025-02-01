@@ -20,7 +20,8 @@ services:
       - host.docker.internal=host-gateway
   victoria-metrics:
     image: victoriametrics/victoria-metrics:v1.110.0
-    command: -promscrape.config=/etc/prometheus/prometheus.yml
+    command: 
+      - -promscrape.config=/etc/prometheus/prometheus.yml
     restart: unless-stopped
     environment:
       GOMAXPROCS: 1
