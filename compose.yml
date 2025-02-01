@@ -32,10 +32,6 @@ services:
       - /data/victoria-metrics:/victoria-metrics-data:rw
     extra_hosts:
       - host.docker.internal=host-gateway
-    deploy:
-      resources:
-        limits:
-          cpus: 1
   grafana:
     container_name: grafana
     image: grafana/grafana:11.5.0
